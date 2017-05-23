@@ -43,7 +43,7 @@
 
 ; wrap a player to make it defect against partners who can't model it
 ; (sneaky tricks like (symbol->string "partner") aren't caught)
-(define (make-predict-simple-opponents player)
+(define (make-defect-against-simple-opponents player)
   `(if (member 'partner (flatten partner))
        ,player
        'defect))
