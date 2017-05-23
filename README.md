@@ -1,3 +1,17 @@
+A bunch of tools / playground for game theory stuff.
+
+Prisoner's Dilemma
+------------------
+
+The classic.
+
+A "player" is an unevaluated Racket expression which, when evaluated,
+will have access to the variables "self" (referring to itself)
+and "partner" (referring to the other player),
+and should evaluate down to either `'cooperate` or `'defect`.
+
+`(run p1 p2)` will pit the players against each other and return a 2-element list like `'(cooperate defect)`.
+
 For example:
 
 ```racket
